@@ -9,15 +9,8 @@ void setup() {
 
 void loop() {
   if (receiver.available()) {
-    
-    Serial.print("Received ");
-    Serial.print( receiver.getReceivedValue() );
-    Serial.print(" / ");
-    Serial.print( receiver.getReceivedBitlength() );
-    Serial.print("bit ");
-    Serial.print("Protocol: ");
-    Serial.println( receiver.getReceivedProtocol() );
-
+    Serial.print(receiver.getReceivedValue());
+    Serial.print(";");
     receiver.resetAvailable();
   }
 }
